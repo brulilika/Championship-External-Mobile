@@ -14,4 +14,20 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="View\" />
+    <None Remove="ViewModel\" />
+    <None Remove="Model\" />
+    <None Remove="Interface\" />
+    <None Remove="Data\" />
+    <None Remove="Context\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Model\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Data\" />
+    <Folder Include="Context\" />
+  </ItemGroup>
 </Project>

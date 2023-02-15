@@ -1,4 +1,5 @@
 ﻿using System;
+using ChampionshipExternalMobile.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Championship_External_Mobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new InitialBoard());
         }
 
         protected override void OnStart ()
