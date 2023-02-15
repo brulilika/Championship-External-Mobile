@@ -13,6 +13,8 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.4.0.50" />
+    <PackageReference Include="Syncfusion.Licensing" Version="20.4.0.50" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="View\" />
@@ -21,6 +23,8 @@
     <None Remove="Interface\" />
     <None Remove="Data\" />
     <None Remove="Context\" />
+    <None Remove="Syncfusion.Xamarin.Core" />
+    <None Remove="Syncfusion.Licensing" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
