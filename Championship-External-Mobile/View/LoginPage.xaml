@@ -3,9 +3,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-    x:Class="ChampionshipExternalMobile.View.InitialBoard">
+    x:Class="ChampionshipExternalMobile.View.LoginPage">
     <ContentPage.Content>
-        <Grid BackgroundColor="#5F9EA0" RowDefinitions="50,*,150" ColumnDefinitions="20,*, 20">
+         <Grid BackgroundColor="#5F9EA0" RowDefinitions="50,*,150" ColumnDefinitions="20,*, 20">
             <cards:SfCardView Grid.Row="1" Grid.Column="1">
                 <cards:SfCardView.Content>
                     <Grid RowDefinitions="Auto,Auto,*,Auto" >

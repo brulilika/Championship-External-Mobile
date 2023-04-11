@@ -38,4 +38,9 @@
     <Folder Include="Data\" />
     <Folder Include="Context\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

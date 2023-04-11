@@ -13,7 +13,7 @@ namespace Championship_External_Mobile
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new InitialBoard());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart ()

@@ -1,18 +1,21 @@
 ﻿using System;
+using ChampionshipExternalMobile.View;
 using Xamarin.Forms;
 
 namespace ChampionshipExternalMobile.ViewModel
 {
-	public class InitialBoardViewModel : BaseViewModel
+	public class LoginPageViewModel : BaseViewModel
     {
         #region Propriedades
+        private INavigation _navigation;
         private string _username;
         private string _password;
         private Command _buttonCommand;
         #endregion
 
-        public InitialBoardViewModel()
+        public LoginPageViewModel(INavigation navigation)
 		{
+            _navigation = navigation;
 		}
 
         #region Encapsulamento
@@ -25,14 +28,9 @@ namespace ChampionshipExternalMobile.ViewModel
 
             try
             {
-                Console.WriteLine(Username +" "+ Password);
-
+                Championship_External_Mobile.App.Current.MainPage = new NavigationPage(new MainPage()); 
             }
             catch
-            {
-
-            }
-            finally
             {
 
             }
@@ -43,3 +41,4 @@ namespace ChampionshipExternalMobile.ViewModel
         #endregion
     }
 }
+
