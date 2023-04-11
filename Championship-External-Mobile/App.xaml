@@ -4,7 +4,7 @@
              x:Class="Championship_External_Mobile.App">
     <Application.Resources>
         <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#9579DB"/>
+            <Setter Property="BarBackgroundColor" Value="#5F9EA0"/>
         </Style>
     </Application.Resources>
 </Application>

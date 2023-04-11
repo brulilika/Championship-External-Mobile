@@ -11,10 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.4.0.50" />
-    <PackageReference Include="Syncfusion.Licensing" Version="20.4.0.50" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="21.1.39" />
+    <PackageReference Include="Syncfusion.Licensing" Version="21.1.39" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="21.1.39" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="20.4.0.54" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="View\" />
@@ -25,6 +27,8 @@
     <None Remove="Context\" />
     <None Remove="Syncfusion.Xamarin.Core" />
     <None Remove="Syncfusion.Licensing" />
+    <None Remove="Syncfusion.Xamarin.Buttons" />
+    <None Remove="Syncfusion.Xamarin.Cards" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />

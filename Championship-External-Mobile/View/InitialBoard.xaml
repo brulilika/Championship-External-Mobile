@@ -2,24 +2,26 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
     x:Class="ChampionshipExternalMobile.View.InitialBoard">
     <ContentPage.Content>
-        <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="PAO!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+        <Grid BackgroundColor="#5F9EA0" RowDefinitions="50,*,150" ColumnDefinitions="20,*, 20">
+            <cards:SfCardView Grid.Row="1" Grid.Column="1">
+                <cards:SfCardView.Content>
+                    <Grid RowDefinitions="Auto,Auto,*,Auto" >
+                        <Label Grid.Row="0" Text="Champs" FontSize="50" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="1" Text="Login" FontSize="25" HorizontalTextAlignment="Center"/>
+                        <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto" Padding="10" VerticalOptions="Center">
+                            <Label Grid.Row="0" Text="Username"/>
+                            <Entry Grid.Row="1" Placeholder="Username" Text="{Binding Username}"/>
+                            <Label Grid.Row="2" Text="Password"/>
+                            <Entry Grid.Row="3" Placeholder="Password" Text="{Binding Password}"/>
+                        </Grid>
+                        <Button Grid.Row="3" Text="Entrar" Command="{Binding ButtonCommand}"/>
+                    </Grid>
+                </cards:SfCardView.Content>
+            </cards:SfCardView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
 
