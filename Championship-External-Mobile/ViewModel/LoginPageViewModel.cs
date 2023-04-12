@@ -24,7 +24,7 @@ namespace ChampionshipExternalMobile.ViewModel
         #endregion
 
         #region Commands
-        public Command ButtonCommand => _buttonCommand ?? (_buttonCommand = new Command(async () => {
+        public Command ButtonCommand => _buttonCommand ?? (_buttonCommand = new Command( () => {
 
             try
             {

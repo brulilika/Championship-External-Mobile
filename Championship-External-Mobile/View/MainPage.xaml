@@ -2,9 +2,28 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+    xmlns:partial="clr-namespace:ChampionshipExternalMobile.View.PartialView.MainPage"
     x:Class="ChampionshipExternalMobile.View.MainPage">
     <ContentPage.Content>
-        <Label Text="PAO"/>
+        <tabView:SfTabView VisibleHeaderCount="3" DisplayMode="Text"
+                           TabHeaderPosition="Bottom" TabHeaderBackgroundColor="#5F9EA0">
+            <tabView:SfTabItem Title="Geral" TitleFontColor="White" SelectionColor="White">
+                <tabView:SfTabItem.Content>
+                    <partial:MatchView/>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Home" TitleFontColor="White" SelectionColor="White">
+                <tabView:SfTabItem.Content>
+                    <partial:HomeView/>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="User" TitleFontColor="White" SelectionColor="White">
+                <tabView:SfTabItem.Content>
+                    <partial:UserView/>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
 

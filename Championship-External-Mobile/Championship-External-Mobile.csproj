@@ -17,6 +17,7 @@
     <PackageReference Include="Syncfusion.Licensing" Version="21.1.39" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="21.1.39" />
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="20.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="20.4.0.54" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="View\" />
@@ -29,6 +30,9 @@
     <None Remove="Syncfusion.Licensing" />
     <None Remove="Syncfusion.Xamarin.Buttons" />
     <None Remove="Syncfusion.Xamarin.Cards" />
+    <None Remove="Syncfusion.Xamarin.SfTabView" />
+    <None Remove="View\PartialView\" />
+    <None Remove="View\PartialView\MainPage\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
@@ -37,6 +41,8 @@
     <Folder Include="Interface\" />
     <Folder Include="Data\" />
     <Folder Include="Context\" />
+    <Folder Include="View\PartialView\" />
+    <Folder Include="View\PartialView\MainPage\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="View\LoginPage.xaml.cs">

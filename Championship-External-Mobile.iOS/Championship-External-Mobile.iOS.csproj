@@ -138,6 +138,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Cards">
       <Version>20.4.0.54</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView">
+      <Version>20.4.0.54</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -145,5 +148,9 @@
       <Project>{2191EA41-CB69-477B-80A3-719F7E94362D}</Project>
       <Name>Championship-External-Mobile</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Font Awesome 6 Free-Regular-400.otf" />
+    <BundleResource Include="Resources\Font Awesome 6 Free-Solid-900.otf" />
   </ItemGroup>
 </Project>

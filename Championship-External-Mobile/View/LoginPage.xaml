@@ -5,10 +5,10 @@
     xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
     x:Class="ChampionshipExternalMobile.View.LoginPage">
     <ContentPage.Content>
-         <Grid BackgroundColor="#5F9EA0" RowDefinitions="50,*,150" ColumnDefinitions="20,*, 20">
+         <Grid BackgroundColor="#5F9EA0" RowDefinitions="150,*,150" ColumnDefinitions="20,*, 20">
             <cards:SfCardView Grid.Row="1" Grid.Column="1">
                 <cards:SfCardView.Content>
-                    <Grid RowDefinitions="Auto,Auto,*,Auto" >
+                    <Grid RowDefinitions="Auto,Auto,*,Auto">
                         <Label Grid.Row="0" Text="Champs" FontSize="50" HorizontalTextAlignment="Center"/>
                         <Label Grid.Row="1" Text="Login" FontSize="25" HorizontalTextAlignment="Center"/>
                         <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto" Padding="10" VerticalOptions="Center">
