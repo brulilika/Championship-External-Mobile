@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
 using UIKit;
 
 namespace Championship_External_Mobile.iOS
@@ -29,6 +30,7 @@ namespace Championship_External_Mobile.iOS
             Syncfusion.XForms.iOS.Buttons.SfButtonRenderer.Init();
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
             Syncfusion.XForms.iOS.TabView.SfTabViewRenderer.Init();
+            SfListViewRenderer.Init();
             #endregion
             LoadApplication(new App());            
             return base.FinishedLaunching(app, options);
