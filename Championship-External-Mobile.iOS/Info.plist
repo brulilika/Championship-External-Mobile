@@ -35,11 +35,9 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIAppFonts</key>
-	<dict>
-		<key>fa-solid-900.ttf</key>
-		<string></string>
-		<key>fa-regular-400.ttf</key>
-		<string>Novo elemento</string>
-	</dict>
+	<array>
+		<string>Font Awesome 6 Free-Regular-400.otf</string>
+		<string>Font Awesome 6 Free-Solid-900.otf</string>
+	</array>
 </dict>
 </plist>

@@ -33,6 +33,7 @@
     <None Remove="Syncfusion.Xamarin.SfTabView" />
     <None Remove="View\PartialView\" />
     <None Remove="View\PartialView\MainPage\" />
+    <None Remove="ViewModel\PartialViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
@@ -43,6 +44,7 @@
     <Folder Include="Context\" />
     <Folder Include="View\PartialView\" />
     <Folder Include="View\PartialView\MainPage\" />
+    <Folder Include="ViewModel\PartialViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="View\LoginPage.xaml.cs">

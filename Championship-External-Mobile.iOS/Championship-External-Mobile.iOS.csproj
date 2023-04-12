@@ -153,4 +153,10 @@
     <BundleResource Include="Resources\Font Awesome 6 Free-Regular-400.otf" />
     <BundleResource Include="Resources\Font Awesome 6 Free-Solid-900.otf" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\circleUser.svg" />
+    <AndroidResource Include="Resources\house.svg" />
+    <AndroidResource Include="Resources\trophy.svg" />
+    <AndroidResource Include="Resources\user.svg" />
+  </ItemGroup>
 </Project>
