@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Championship_External_Mobile;
 using ChampionshipExternalMobile.View;
 using Xamarin.Forms;
+using ChampionshipExternalMobile.Service;
+using ChampionshipExternalMobile.Model.Request;
+using Xamarin.Essentials;
 
 namespace ChampionshipExternalMobile.ViewModel
 {
@@ -24,20 +29,50 @@ namespace ChampionshipExternalMobile.ViewModel
         #endregion
 
         #region Commands
-        public Command ButtonCommand => _buttonCommand ?? (_buttonCommand = new Command( () => {
-
-            try
-            {
-                Championship_External_Mobile.App.Current.MainPage = new NavigationPage(new MainPage()); 
-            }
-            catch
-            {
-
-            }
-        }));
+        public Command ButtonCommand => _buttonCommand ?? (_buttonCommand = new Command( async () => { await LoginCommandExecute(); }));
         #endregion
 
         #region Funções
+        private async Task LoginCommandExecute()
+        {
+            try
+            {
+                if (InputValidation())
+                {
+                    var loginService = new LoginService();
+                    var token = await loginService.Login(new LoginRequest() { email = Username, password = Password });
+                    if (!string.IsNullOrEmpty(token))
+                    {
+                        Preferences.Set("Username", Username);
+                        Preferences.Set("Password", Password);
+                        App.Current.MainPage = new NavigationPage(new MainPage());
+                    }
+                    else
+                        await App.Current.MainPage.DisplayAlert("Atenção", "Não foi possível fazer o login. Verifique usuário e senha informado.", "Ok");
+                }                
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Atenção", ex.Message, "Ok");
+            }
+        }
+
+        private bool InputValidation()
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(Username))
+                    throw new Exception("É obrigatório informar email");
+                if(String.IsNullOrEmpty(Password))
+                    throw new Exception("É obrigatório informar senha");
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
     }
 }

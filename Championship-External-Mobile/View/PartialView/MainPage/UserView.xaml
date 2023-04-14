@@ -14,8 +14,8 @@
             </Grid>
             <Frame Grid.Row="3" HeightRequest="1" BackgroundColor="LightGray" />
             <Label Grid.Row="4" Text="Gestão de Usuário" Margin="10" FontSize="20"/>
-            <syncfusion:SfListView Grid.Row="5" ItemsSource="{Binding UserFunctions}"
-                      SelectionMode="Single" ItemSize="60">
+            <syncfusion:SfListView Grid.Row="5" ItemsSource="{Binding UserFunctions}" SelectionBackgroundColor="Transparent"
+                      SelectionMode="Single" ItemSize="70" ItemTapped="SfListView_ItemTapped">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

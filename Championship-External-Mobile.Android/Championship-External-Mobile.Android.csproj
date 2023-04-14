@@ -76,6 +76,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Expander">
       <Version>20.4.0.54</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

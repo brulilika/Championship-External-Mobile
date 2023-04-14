@@ -15,7 +15,7 @@
                             <Label Grid.Row="0" Text="Username"/>
                             <Entry Grid.Row="1" Placeholder="Username" Text="{Binding Username}"/>
                             <Label Grid.Row="2" Text="Password"/>
-                            <Entry Grid.Row="3" Placeholder="Password" Text="{Binding Password}"/>
+                            <Entry Grid.Row="3" Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
                         </Grid>
                         <Button Grid.Row="3" Text="Entrar" Command="{Binding ButtonCommand}"/>
                     </Grid>
