@@ -10,6 +10,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
     {
         #region Propriedades
         private List<Match> _matchList;
+        private Match _selectedMatch;
         #endregion
 
         public MatchPartialViewModel()
@@ -20,6 +21,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
 
         #region Encapsulamento
         public List<Match> MatchList { get { return _matchList; } set { _matchList = value; OnPropertyChanged("MatchList"); } }
+        public Match SelectedMatch { get { return _selectedMatch; } set { _selectedMatch = value; OnPropertyChanged("SelectedMatch"); } }
         #endregion
 
         #region Commands

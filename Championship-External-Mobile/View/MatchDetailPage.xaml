@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms"
+    x:Class="ChampionshipExternalMobile.View.MatchDetailPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+            <Label Grid.Row="0" Text="TeamA vs TeamB"/>
+            <Label Grid.Row="1" Text="12/04/2023 13:00"/>
+            <syncfusion:SfExpander Grid.Row="2"> 
+                <syncfusion:SfExpander.Header> 
+                    <Grid>
+                        <Label TextColor="#495F6E" Text="Descrição" VerticalTextAlignment="Center" /> 
+                    </Grid>
+                </syncfusion:SfExpander.Header> 
+                <syncfusion:SfExpander.Content> 
+                    <Grid Padding="10,10,10,10" BackgroundColor="#FFFFFF"> 
+                        <Label TextColor="#303030" Text="Non-veg pizza is prepared by including the meat and animal tissue products." HeightRequest="50" VerticalTextAlignment="Center"/> 
+                    </Grid> 
+                </syncfusion:SfExpander.Content> 
+            </syncfusion:SfExpander>
+            <syncfusion:SfExpander Grid.Row="3"> 
+                <syncfusion:SfExpander.Header> 
+                    <Grid>
+                        <Label TextColor="#495F6E" Text="Ocorrências" VerticalTextAlignment="Center" /> 
+                    </Grid>
+                </syncfusion:SfExpander.Header> 
+                <syncfusion:SfExpander.Content> 
+                    <Grid Padding="10,10,10,10" BackgroundColor="#FFFFFF"> 
+                        <Label TextColor="#303030" Text="Non-veg pizza is prepared by including the meat and animal tissue products." HeightRequest="50" VerticalTextAlignment="Center"/> 
+                    </Grid> 
+                </syncfusion:SfExpander.Content> 
+            </syncfusion:SfExpander>
+            <Grid Grid.Row="4" RowDefinitions="Auto,Auto">
+                <Button Grid.Row="0" Text="Ocorrência"/>
+                <Button Grid.Row="1" Text="Finalizar" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

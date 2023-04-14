@@ -8,23 +8,27 @@
         <Grid RowDefinitions="Auto,120,Auto, Auto" Margin="10">
             <Label Grid.Row="0" Text="Em Andamento" FontSize="20"/>
             <Frame Grid.Row="1" BackgroundColor="#cae5e6" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
                 <Grid RowDefinitions="Auto,Auto,Auto">
-                    <Label Grid.Row="0" Text="TimeA vs TimeB"/>
-                    <Label Grid.Row="1" Text="Campetição 3"/>
-                    <Label Grid.Row="2" Text="12/04/2023 13:00"/>
+                    <Label Grid.Row="0" FontSize="25" Text="TimeA vs TimeB"/>
+                    <Label Grid.Row="1" FontSize="15" Text="Campetição 3"/>
+                    <Label Grid.Row="2" FontSize="15" Text="12/04/2023 13:00"/>
                 </Grid>
             </Frame>
             <Label Grid.Row="2" Text="Próximos confrontos" FontSize="20"/>
-            <syncfusion:SfListView Grid.Row="3" ItemsSource="{Binding NextMatchList}" SelectionMode="Single" ItemSize="100">
+            <syncfusion:SfListView Grid.Row="3" ItemsSource="{Binding NextMatchList}" SelectionMode="Single"
+                                   ItemSize="100" SelectionBackgroundColor="Transparent" ItemTapped="SfListView_ItemTapped">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Frame BackgroundColor="#cae5e6" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
                                 <Grid RowSpacing="0" RowDefinitions="Auto,Auto,Auto">
                                     <Grid Grid.Row="0" ColumnDefinitions="Auto, Auto, Auto">
-                                        <Label Grid.Column="0" Text="{Binding TeamA}" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                        <Label Grid.Column="1" Text="vs" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                        <Label Grid.Column="2" Text="{Binding TeamB}" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="0" Text="{Binding TeamA}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="1" Text="vs" LineBreakMode="TailTruncation" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label Grid.Column="2" Text="{Binding TeamB}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
                                     </Grid>
                                     <Label Grid.Row="1" Text="{Binding CompetitionCode}" LineBreakMode="TailTruncation"/>
                                     <Label Grid.Row="2" Text="{Binding StartDate}" LineBreakMode="TailTruncation"/>

@@ -19,6 +19,7 @@
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="20.4.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="20.4.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="20.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="20.4.0.54" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="View\" />
@@ -36,6 +37,7 @@
     <None Remove="View\PartialView\MainPage\" />
     <None Remove="ViewModel\PartialViewModel\" />
     <None Remove="Syncfusion.Xamarin.SfListView" />
+    <None Remove="Syncfusion.Xamarin.Expander" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />

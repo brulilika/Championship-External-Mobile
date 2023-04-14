@@ -5,7 +5,8 @@
     xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     x:Class="ChampionshipExternalMobile.View.PartialView.MainPage.MatchView">
     <ContentView.Content>
-        <syncfusion:SfListView ItemsSource="{Binding MatchList}" SelectionMode="Single" ItemSize="170">
+        <syncfusion:SfListView ItemsSource="{Binding MatchList}" SelectionMode="Single" ItemSize="170" SelectionBackgroundColor="Transparent"
+                               SelectedItem="{Binding SelectedMatch}" ItemTapped="SfListView_ItemTapped">
             <syncfusion:SfListView.LayoutManager>
                 <syncfusion:GridLayout SpanCount="3"/>
             </syncfusion:SfListView.LayoutManager>
