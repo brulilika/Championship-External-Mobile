@@ -6,6 +6,8 @@ using Xamarin.Forms;
 using ChampionshipExternalMobile.Service;
 using ChampionshipExternalMobile.Model.Request;
 using Xamarin.Essentials;
+using System.Collections.Generic;
+using ChampionshipExternalMobile.Model;
 
 namespace ChampionshipExternalMobile.ViewModel
 {
@@ -40,11 +42,8 @@ namespace ChampionshipExternalMobile.ViewModel
                 if (InputValidation())
                 {
                     var loginService = new LoginService();
-                    var token = await loginService.Login(new LoginRequest() { email = Username, password = Password });
-                    if (!string.IsNullOrEmpty(token))
+                    if (await loginService.Login(new LoginRequest() { email = Username, password = Password }))
                     {
-                        Preferences.Set("Username", Username);
-                        Preferences.Set("Password", Password);
                         App.Current.MainPage = new NavigationPage(new MainPage());
                     }
                     else
