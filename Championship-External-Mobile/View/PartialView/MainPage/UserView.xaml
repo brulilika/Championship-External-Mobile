@@ -7,10 +7,10 @@
     <ContentView.Content>
         <Grid RowDefinitions="120,Auto,Auto,1,Auto,*">
             <Image Grid.Row="0" Source="UserImage.png" Aspect="AspectFit" HeightRequest="120" Margin="10 "/>
-            <Label Grid.Row="1" Text="Nome do Usuário" HorizontalOptions="Center" FontSize="30"/>
-            <Grid Grid.Row="2" ColumnDefinitions="*,*" Margin="10">
+            <Label Grid.Row="1" Text="{Binding UserName}" HorizontalOptions="Center" FontSize="30"/>
+            <Grid Grid.Row="2" ColumnDefinitions="Auto,*" Margin="10">
                 <Label Grid.Column="0" Text="Email" VerticalOptions="Center"/>
-                <Entry Grid.Column="1" IsEnabled="False" Text="brunalika@msn.com"/>
+                <Entry Grid.Column="1" IsEnabled="False" Text="{Binding Email}"/>
             </Grid>
             <Frame Grid.Row="3" HeightRequest="1" BackgroundColor="LightGray" />
             <Label Grid.Row="4" Text="Gestão de Usuário" Margin="10" FontSize="20"/>

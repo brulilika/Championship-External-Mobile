@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using ChampionshipExternalMobile.Model;
@@ -49,7 +50,28 @@ namespace ChampionshipExternalMobile.Service
             }
         }
 
+        public async Task<User> GetUserById(string userId)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Preferences.Get("token", ""));
 
+                URL = $"{URL}{userId}";
+                HttpResponseMessage resp = await client.GetAsync(URL);
+
+                if (!resp.IsSuccessStatusCode)
+                    return null;
+
+                User user = JsonConvert.DeserializeObject<User>(resp.Content.ReadAsStringAsync().Result);
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 
