@@ -21,7 +21,7 @@ namespace ChampionshipExternalMobile.View.PartialView.MainPage
         {
             if (sender is SfListView lv)
                 lv.SelectedItem = null;
-            this.Navigation.PushAsync(new MatchDetailPage(e.ItemData as Match));
+            this.Navigation.PushAsync(new MatchDetailPage((e.ItemData as Match).Id));
         }
     }
 }

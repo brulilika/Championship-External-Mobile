@@ -67,6 +67,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
                         await App.Current.MainPage.DisplayAlert("Atenção", "Funcionalidade ainda em desenvolvimento", "OK");
                         break;
                     case "Logout":
+
                         App.Current.MainPage = new NavigationPage(new LoginPage());
                         break;
                     default:

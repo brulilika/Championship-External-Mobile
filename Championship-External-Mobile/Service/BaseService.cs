@@ -7,7 +7,7 @@ namespace ChampionshipExternalMobile.Service
 
         public BaseService()
         {
-            URL = "http://192.168.0.13:7232/";
+            URL = "http://192.168.0.11:7232/";
             //URL = "https://champscoreapi.azurewebsites.net/";
         }
     }

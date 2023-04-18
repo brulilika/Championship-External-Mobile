@@ -9,10 +9,10 @@ namespace ChampionshipExternalMobile.View
 	public partial class MatchDetailPage : ContentPage
 	{
 		private MatchDetailViewModel _matchDetailViewModel;
-        public MatchDetailPage (Match _match)
+        public MatchDetailPage (Guid matchId)
 		{
 			InitializeComponent ();
-			_matchDetailViewModel = new MatchDetailViewModel(_match);
+			_matchDetailViewModel = new MatchDetailViewModel(matchId);
 			BindingContext = _matchDetailViewModel;
         }
 	}

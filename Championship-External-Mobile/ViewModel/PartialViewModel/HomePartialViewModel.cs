@@ -34,9 +34,9 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
         {
             try
             {
-                NextMatchList.Add(new Match() { MatchCode = "#120", CompetitionCode = "Competição 02", TeamA = "TimeA", TeamB = "TimeB", Status = MatchStatusEnum.schedule, StartDate = "12/04/2023 10:30" });
-                NextMatchList.Add(new Match() { MatchCode = "#121", CompetitionCode = "Competição 03", TeamA = "TimeC", TeamB = "TimeD", Status = MatchStatusEnum.going, StartDate = "12/04/2023 13:00" });
-                NextMatchList.Add(new Match() { MatchCode = "#122", CompetitionCode = "Competição 04", TeamA = "TimeE", TeamB = "TimeF", Status = MatchStatusEnum.finished, StartDate = "12/04/2023 15:30" });
+                //NextMatchList.Add(new Match() { MatchCode = "#120", CompetitionCode = "Competição 02", TeamA = "TimeA", TeamB = "TimeB", Status = MatchStatusEnum.schedule, StartDate = "12/04/2023 10:30" });
+                //NextMatchList.Add(new Match() { MatchCode = "#121", CompetitionCode = "Competição 03", TeamA = "TimeC", TeamB = "TimeD", Status = MatchStatusEnum.going, StartDate = "12/04/2023 13:00" });
+                //NextMatchList.Add(new Match() { MatchCode = "#122", CompetitionCode = "Competição 04", TeamA = "TimeE", TeamB = "TimeF", Status = MatchStatusEnum.finished, StartDate = "12/04/2023 15:30" });
             }
             catch (Exception ex)
             {
@@ -48,7 +48,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
         {
             try
             {
-                await _navigation.PushAsync(new MatchDetailPage(new Match() { MatchCode = "#120", CompetitionCode = "Competição 02", TeamA = "TimeA", TeamB = "TimeB", Status = MatchStatusEnum.schedule, StartDate = "12/04/2023 10:30" }));
+                //await _navigation.PushAsync(new MatchDetailPage(new Match() { MatchCode = "#120", CompetitionCode = "Competição 02", TeamA = "TimeA", TeamB = "TimeB", Status = MatchStatusEnum.schedule, StartDate = "12/04/2023 10:30" }));
             }
             catch (Exception ex)
             {

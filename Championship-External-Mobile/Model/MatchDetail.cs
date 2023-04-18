@@ -1,13 +1,12 @@
 ﻿using System;
 namespace ChampionshipExternalMobile.Model
 {
-	public class Match
+	public class MatchDetail
 	{
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int PhaseNumber { get; set; }
         public string StartDate { get; set; }
-        public string ChampionshipName { get; set; }
         public int TotalTickets { get; set; }
         public int SoldTickets { get; set; }
         public string RefereeName { get; set; }
@@ -16,6 +15,9 @@ namespace ChampionshipExternalMobile.Model
         public Guid IdTeamB { get; set; }
         public string TeamBName { get; set; }
         public MatchStatusEnum Status { get; set; }
+        public string ChampionshipName { get; set; }
+        public string ChampionshipDetail { get; set; }
+        public object MatchOcurrence { get; set; }
     }
 }
 

@@ -3,9 +3,9 @@ namespace ChampionshipExternalMobile.Model
 {
 	public enum MatchStatusEnum
 	{
-		schedule,
-		going,
-		finished
-	}
+        Created,
+        OnGoing,
+        Finished
+    }
 }
 

@@ -5,8 +5,8 @@
     xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     x:Class="ChampionshipExternalMobile.View.PartialView.MainPage.MatchView">
     <ContentView.Content>
-        <syncfusion:SfListView ItemsSource="{Binding MatchList}" SelectionMode="Single" ItemSize="170" SelectionBackgroundColor="Transparent"
-                               SelectedItem="{Binding SelectedMatch}" ItemTapped="SfListView_ItemTapped">
+        <syncfusion:SfListView ItemsSource="{Binding MatchList}" SelectionMode="Single" ItemSize="150" SelectionBackgroundColor="Transparent"
+                               SelectedItem="{Binding SelectedMatch}" ItemTapped="SfListView_ItemTapped" Margin="10">
             <syncfusion:SfListView.LayoutManager>
                 <syncfusion:GridLayout SpanCount="3"/>
             </syncfusion:SfListView.LayoutManager>
@@ -14,13 +14,12 @@
                 <DataTemplate>
                     <ViewCell>
                         <Frame BackgroundColor="#cae5e6" BorderColor="Green" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
-                            <Grid RowSpacing="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
-                                <Label Grid.Row="0" Text="{Binding MatchCode}" FontSize="25" FontAttributes="Bold" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                <Label Grid.Row="1" Text="{Binding TeamA}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                <Label Grid.Row="2" Text="VS" FontSize="10" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                <Label Grid.Row="3" Text="{Binding TeamB}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
-                                <Label Grid.Row="4" Text="{Binding CompetitionCode}" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
-                                <Label Grid.Row="5" Text="{Binding StartDate}" FontSize="12" LineBreakMode="TailTruncation"/>
+                            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="0">
+                                <Label Grid.Row="0" Text="{Binding TeamAName}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                <Label Grid.Row="1" Text="VS" FontSize="10" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                <Label Grid.Row="2" Text="{Binding TeamBName}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                <Label Grid.Row="3" Text="{Binding ChampionshipName}" FontAttributes="Bold" LineBreakMode="WordWrap"/>
+                                <Label Grid.Row="4" Text="{Binding StartDate}" FontSize="10" LineBreakMode="WordWrap"/>
                             </Grid>
                         </Frame>
                     </ViewCell>
