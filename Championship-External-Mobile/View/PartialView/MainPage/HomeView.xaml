@@ -5,19 +5,24 @@
     xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     x:Class="ChampionshipExternalMobile.View.PartialView.MainPage.HomeView">
     <ContentView.Content>
-        <Grid RowDefinitions="Auto,120,Auto, Auto" Margin="10">
-            <Label Grid.Row="0" Text="Em Andamento" FontSize="20"/>
-            <Frame Grid.Row="1" BackgroundColor="#cae5e6" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
+        <Grid RowDefinitions="Auto,Auto,Auto, Auto" Margin="10">
+            <Label Grid.Row="0" Text="Em Andamento" FontSize="20" IsVisible="{Binding OnGoingCard}"/>
+            <Frame Grid.Row="1" BackgroundColor="#cae5e6" CornerRadius="10" Padding="10"
+                   HasShadow="False" Margin="5" IsVisible="{Binding OnGoingCard}">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Frame.GestureRecognizers>
                 <Grid RowDefinitions="Auto,Auto,Auto">
-                    <Label Grid.Row="0" FontSize="25" Text="TimeA vs TimeB"/>
-                    <Label Grid.Row="1" FontSize="15" Text="Campetição 3"/>
-                    <Label Grid.Row="2" FontSize="15" Text="12/04/2023 13:00"/>
+                    <Grid Grid.Row="0" ColumnDefinitions="Auto,Auto,Auto" HorizontalOptions="Center">
+                        <Label Grid.Column="0" Text="{Binding OnGoingMatch.TeamAName}" FontSize="30"/>
+                        <Label Grid.Column="1" Text="VS" VerticalOptions="Center"/>
+                        <Label Grid.Column="2" Text="{Binding OnGoingMatch.TeamBName}" FontSize="30"/>
+                    </Grid>
+                    <Label Grid.Row="1" FontSize="15" Text="{Binding OnGoingMatch.ChampionshipName}"/>
+                    <Label Grid.Row="2" FontSize="15" Text="{Binding OnGoingMatch.StartDate}"/>
                 </Grid>
             </Frame>
-            <Label Grid.Row="2" Text="Próximos confrontos" FontSize="20"/>
+            <Label Grid.Row="2" Text="Próximos confrontos" FontSize="20" />
             <syncfusion:SfListView Grid.Row="3" ItemsSource="{Binding NextMatchList}" SelectionMode="Single"
                                    ItemSize="100" SelectionBackgroundColor="Transparent" ItemTapped="SfListView_ItemTapped">
                 <syncfusion:SfListView.ItemTemplate>
@@ -26,11 +31,11 @@
                             <Frame BackgroundColor="#cae5e6" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
                                 <Grid RowSpacing="0" RowDefinitions="Auto,Auto,Auto">
                                     <Grid Grid.Row="0" ColumnDefinitions="Auto, Auto, Auto">
-                                        <Label Grid.Column="0" Text="{Binding TeamA}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="0" Text="{Binding TeamAName}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
                                         <Label Grid.Column="1" Text="vs" LineBreakMode="TailTruncation" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                        <Label Grid.Column="2" Text="{Binding TeamB}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="2" Text="{Binding TeamBName}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
                                     </Grid>
-                                    <Label Grid.Row="1" Text="{Binding CompetitionCode}" LineBreakMode="TailTruncation"/>
+                                    <Label Grid.Row="1" Text="{Binding ChampionshipName}" LineBreakMode="TailTruncation"/>
                                     <Label Grid.Row="2" Text="{Binding StartDate}" LineBreakMode="TailTruncation"/>
                                 </Grid>
                             </Frame>

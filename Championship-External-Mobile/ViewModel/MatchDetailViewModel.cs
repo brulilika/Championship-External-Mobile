@@ -54,7 +54,7 @@ namespace ChampionshipExternalMobile.ViewModel
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Atenção", "Não foi possível iniciar lista de funções do cliente", "OK");
+                await App.Current.MainPage.DisplayAlert("Atenção", ex.Message, "OK");
             }
         }
 
@@ -74,7 +74,7 @@ namespace ChampionshipExternalMobile.ViewModel
         {
             try
             {
-                await App.Current.MainPage.DisplayAlert("Atenção", "Finish Match", "OK");
+                await App.Current.MainPage.DisplayAlert("Atenção", "Funcionalidade ainda em desenvolvimento", "OK");
             }
             catch (Exception ex)
             {
@@ -86,7 +86,7 @@ namespace ChampionshipExternalMobile.ViewModel
         {
             try
             {
-                await App.Current.MainPage.DisplayAlert("Atenção", "Start Match", "OK");
+                await App.Current.MainPage.DisplayAlert("Atenção", "Funcionalidade ainda em desenvolvimento", "OK");
             }
             catch (Exception ex)
             {
