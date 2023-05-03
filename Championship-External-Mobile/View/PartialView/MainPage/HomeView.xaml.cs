@@ -28,6 +28,7 @@ namespace ChampionshipExternalMobile.View.PartialView.MainPage
 
         async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
+            
             await _homePartialViewModel.DetailPageFunction();
         }
     }

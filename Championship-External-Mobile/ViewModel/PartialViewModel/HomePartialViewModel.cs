@@ -50,7 +50,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
                 List<Match> matches = (await matchService.GetMatches(userId)).FindAll(fa=>fa.Status!= MatchStatusEnum.Finished);
                 if (matches != null)
                 {
-                    NextMatchList = matches.Take(5).ToList();
+                    NextMatchList = matches.FindAll(fa=>fa.Status!= MatchStatusEnum.OnGoing).Take(5).ToList();
                     OnGoingMatch = matches.Where(w => w.Status == MatchStatusEnum.OnGoing)?.FirstOrDefault();
                     OnGoingCard = OnGoingMatch == null ? false : true;
                     if (!OnGoingCard)
@@ -67,7 +67,7 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
         {
             try
             {
-                //await _navigation.PushAsync(new MatchDetailPage(new Match() { MatchCode = "#120", CompetitionCode = "Competição 02", TeamA = "TimeA", TeamB = "TimeB", Status = MatchStatusEnum.schedule, StartDate = "12/04/2023 10:30" }));
+                await _navigation.PushAsync(new MatchDetailPage(OnGoingMatch.Id, this, null));
             }
             catch (Exception ex)
             {

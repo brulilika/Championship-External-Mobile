@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using ChampionshipExternalMobile.View;
 using ChampionshipExternalMobile.Service;
+using System.Diagnostics;
+using ChampionshipExternalMobile.Model.Request;
 
 namespace ChampionshipExternalMobile.ViewModel
 {
@@ -74,7 +76,33 @@ namespace ChampionshipExternalMobile.ViewModel
         {
             try
             {
-                await App.Current.MainPage.DisplayAlert("Atenção", "Funcionalidade ainda em desenvolvimento", "OK");
+                string action = await App.Current.MainPage.DisplayActionSheet("Selecione time ganhador:", "Cancel", null, "Time A", "Time B");
+                FinishMatch finishMatch = new FinishMatch()
+                {
+                    IdMatch = MatchDetail.Id,
+                    MatchPhase = MatchDetail.PhaseNumber,
+                    IdWinner = Guid.Empty
+                };
+                switch (action)
+                {
+                    case "Time A":
+                        finishMatch.IdWinner = MatchDetail.IdTeamA;
+                        break;
+                    case "Time B":
+                        finishMatch.IdWinner = MatchDetail.IdTeamB;
+                        break;
+                    default:
+                        break;
+                }
+                MatchService matchService = new MatchService();
+                var resp = await matchService.FinishMatch(finishMatch);
+                if (resp)
+                {
+                    await App.Current.MainPage.DisplayAlert("Atenção", "Confronto finalizado!", "OK");
+                    await LoadData();
+                }
+                else
+                    await App.Current.MainPage.DisplayAlert("Atenção", "Não foi possível finalizar confronto. Tente novamente.", "OK");
             }
             catch (Exception ex)
             {
@@ -86,7 +114,19 @@ namespace ChampionshipExternalMobile.ViewModel
         {
             try
             {
-                await App.Current.MainPage.DisplayAlert("Atenção", "Funcionalidade ainda em desenvolvimento", "OK");
+                MatchService matchService = new MatchService();
+                StartMatch startMatch = new StartMatch()
+                {
+                    IdMatch = MatchDetail.Id
+                };
+                var resp = await matchService.StartMatch(startMatch);
+                if (resp)
+                {
+                    await App.Current.MainPage.DisplayAlert("Atenção", "Confronto iniciado!", "OK");
+                    await LoadData();
+                }
+                else
+                    await App.Current.MainPage.DisplayAlert("Atenção", "Não foi possível iniciar confronto. Tente novamente.", "OK");
             }
             catch (Exception ex)
             {
