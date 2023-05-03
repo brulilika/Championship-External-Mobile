@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Xamarin.Forms;
 namespace ChampionshipExternalMobile.Model
 {
 	public class Match
@@ -16,6 +19,25 @@ namespace ChampionshipExternalMobile.Model
         public Guid IdTeamB { get; set; }
         public string TeamBName { get; set; }
         public MatchStatusEnum Status { get; set; }
+
+
+        public Color StatusColor
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case MatchStatusEnum.Created:
+                        return Color.Green;
+                    case MatchStatusEnum.OnGoing:
+                        return Color.Yellow;
+                    case MatchStatusEnum.Finished:
+                        return Color.Red;
+                    default: return Color.Green;
+                }
+
+            }
+        }
     }
 }
 

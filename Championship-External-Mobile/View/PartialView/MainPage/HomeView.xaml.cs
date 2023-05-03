@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using ChampionshipExternalMobile.Model;
 using ChampionshipExternalMobile.ViewModel.PartialViewModel;
 using Syncfusion.ListView.XForms;
@@ -21,7 +23,7 @@ namespace ChampionshipExternalMobile.View.PartialView.MainPage
         {
             if (sender is SfListView lv)
                 lv.SelectedItem = null;
-            this.Navigation.PushAsync(new MatchDetailPage((e.ItemData as Match).Id));
+            this.Navigation.PushAsync(new MatchDetailPage((e.ItemData as Match).Id,_homePartialViewModel));
         }
 
         async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)

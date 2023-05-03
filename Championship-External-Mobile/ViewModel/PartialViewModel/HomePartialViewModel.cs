@@ -8,6 +8,7 @@ using ChampionshipExternalMobile.Service;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Linq;
+using System.Diagnostics;
 
 namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
 {
@@ -39,13 +40,14 @@ namespace ChampionshipExternalMobile.ViewModel.PartialViewModel
         #endregion
 
         #region Funções
+        
         public async Task LoadData()
         {
             try
             {
                 MatchService matchService = new MatchService();
                 string userId = Preferences.Get("userId", "");
-                List<Match> matches = await matchService.GetMatches(userId);
+                List<Match> matches = (await matchService.GetMatches(userId)).FindAll(fa=>fa.Status!= MatchStatusEnum.Finished);
                 if (matches != null)
                 {
                     NextMatchList = matches.Take(5).ToList();

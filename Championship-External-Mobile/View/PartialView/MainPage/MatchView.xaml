@@ -13,7 +13,7 @@
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame BackgroundColor="#cae5e6" BorderColor="Green" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
+                        <Frame BackgroundColor="#cae5e6" BorderColor="{Binding StatusColor}" CornerRadius="10" Padding="10" HasShadow="False" Margin="5">
                             <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="0">
                                 <Label Grid.Row="0" Text="{Binding TeamAName}" FontSize="20" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
                                 <Label Grid.Row="1" Text="VS" FontSize="10" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
