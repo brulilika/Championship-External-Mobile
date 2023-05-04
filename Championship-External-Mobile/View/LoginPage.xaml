@@ -15,9 +15,9 @@
                         <Label Grid.Row="1" Text="Login" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
                         <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto" Padding="10" VerticalOptions="Center">
                             <Label Grid.Row="0" TextColor="Black" Text="Username"/>
-                            <Entry Grid.Row="1" Placeholder="Username" Text="{Binding Username}"/>
+                            <Entry Grid.Row="1" Placeholder="Username" TextColor="Black" Text="{Binding Username}"/>
                             <Label Grid.Row="2" TextColor="Black" Text="Password"/>
-                            <Entry Grid.Row="3" Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+                            <Entry Grid.Row="3" Placeholder="Password" TextColor="Black" IsPassword="True" Text="{Binding Password}"/>
                         </Grid>
                         <Button Grid.Row="3" BackgroundColor="#5F9EA0" FontAttributes="Bold" TextColor="Black" Text="Entrar" Command="{Binding ButtonCommand}"/>
                     </Grid>

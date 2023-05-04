@@ -91,6 +91,8 @@ namespace ChampionshipExternalMobile.ViewModel
                     case "Time B":
                         finishMatch.IdWinner = MatchDetail.IdTeamB;
                         break;
+                    case "Cancel":
+                        break;
                     default:
                         break;
                 }
